@@ -1,15 +1,19 @@
 {
-    "name": "back/practica",
+    "name": "back/practica1",
     "description": "creacion de primer proyecto con composer",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Back\\Practica\\": "app/"
+            "Back\\Practica1\\": "app/",
+            "config\\": "app/config/",
+            "controller\\": "app/controller/",
+            "model\\": "app/model/"
         }
     },
     "authors": [
         {
-            "name": "valeria"
+            "name": "valeria",
+            "email": "valeriahernandez063@gmail.com"
         }
     ],
     "minimum-stability": "dev",
