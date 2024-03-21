@@ -13,6 +13,15 @@ class ComposerStaticInit386b16db300c8686753068a93e29d0b1
     );
 
     public static $prefixLengthsPsr4 = array (
+        'm' => 
+        array (
+            'model\\' => 6,
+        ),
+        'c' => 
+        array (
+            'controller\\' => 11,
+            'config\\' => 7,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -38,6 +47,18 @@ class ComposerStaticInit386b16db300c8686753068a93e29d0b1
     );
 
     public static $prefixDirsPsr4 = array (
+        'model\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/model',
+        ),
+        'controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/controller',
+        ),
+        'config\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/config',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -64,7 +85,7 @@ class ComposerStaticInit386b16db300c8686753068a93e29d0b1
         ),
         'Back\\Practica1\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
