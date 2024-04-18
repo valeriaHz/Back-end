@@ -16,6 +16,6 @@ $router->route();
     <title>Document</title>
 </head>
 <body>
-    <a href="<?= $router->enlace("login"); ?>">Login</a>
+    <!-- <a href="<?= $router->enlace("login"); ?>">Login</a> -->
 </body>
 </html>

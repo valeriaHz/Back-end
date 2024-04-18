@@ -1,10 +1,9 @@
 <?php
 
 namespace config;
-use controller\Login;
 
 class Router {
-    private const SERVER ="http://backend.val.test/";
+    private const SERVER ="http://backend.val/";
     private const DEP_IMG = self::SERVER."public/img/";
     private const DEP_JS = self::SERVER."public/js/";
     private const DEP_CSS = self::SERVER."public/css/";
@@ -17,6 +16,7 @@ class Router {
             //['controller' => 'Login',
             //'method' => 'iniciarSesion']
             'registro' => 'view/registro',
+            'productos' => 'view/productos/productos',
             'error' => 'view/error',
         ));
     }
