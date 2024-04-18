@@ -1,6 +1,5 @@
 <?php
 namespace config;
-
 use Dotenv\Dotenv;
 use PDO;
 use PDOException;
