@@ -1,10 +1,9 @@
 <?php
 
-use config\Router;
 
 require_once realpath('./vendor/autoload.php');
-$router = new Router();
-$router->route();
+require_once './app/config/MyRoutes.php'
+
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +15,6 @@ $router->route();
     <title>Document</title>
 </head>
 <body>
-    <!-- <a href="<?= $router->enlace("login"); ?>">Login</a> -->
+    <a href="<?= $router->enlace("login"); ?>">Login</a>
 </body>
 </html>
