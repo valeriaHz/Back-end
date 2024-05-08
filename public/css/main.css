@@ -128,13 +128,6 @@ main > form > button{
     color: white;
 }
 
-a{
-    text-decoration: none;
-    color: rgb(34, 97, 190);
-}
-
-
-
 .go-back-button{
     width: 100%;
     padding-top: 10px;
@@ -147,4 +140,23 @@ a{
     text-align: center;
     text-decoration: none;
     font-weight: 600;
+}
+
+#logout {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+#logout:hover {
+    background-color: #0056b3;
+}
+
+#logout:active {
+    background-color: #0056b3;
+    transform: translateY(1px);
 }

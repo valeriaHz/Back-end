@@ -5,13 +5,13 @@ require_once realpath('./vendor/autoload.php');
 
 $router = new Router();
 
-
-
-$router->get("/validarLogin", ['Login', 'iniciarSesion']);
-$router->get("/home", ['Home', 'index']);
-$router->get("/login",['Login', "index"]);
-//crear rutas con respectivos metodos
-
-$router->route();
+$router->post("/validar", ['Login', 'iniciarSesion']);
+$router->get("/home", ['Login', 'home']);
+$router->get("/login",['Login', 'index']);
+$router->get("/registro", ['Login', 'registro']);
+$router->get("/usuarios", ['Login', 'usuarios']);
+$router->post("/actualizar", ['Login', 'actualizar']);
+$router->post("/eliminar", ['Login', 'eliminar']);
+$router->run();
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
@@ -8,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $resultado = "Registro exitoso.";
     }
-
-    echo $resultado;
+    header("Location: ./login");
+    exit();
 }
 ?>
 
@@ -29,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="registro" method="POST" id="register-form">
             <?php
             if (isset($resultado)) {
+                echo "<div class='alert alert-info'>$resultado</div>";
             } else {
             ?>
                 <div class="input-form">
