@@ -39,13 +39,6 @@ class ORM{
                 }
             }
             return $this;
-            /* if($this->contadorWhere > 0){
-                $this->query = "$queryFinal ".($tipo != "AND" ? 'OR' : $tipo)." $campo = '$valor_campo'";
-            }else{
-                $this->query = "$queryFinal WHERE $campo = '$valor_campo'";
-            }
-            $this->contadorWhere++;
-            return $this; */
         }catch(Exception){
             echo("Se produjo un error");
         } 
@@ -208,7 +201,7 @@ class ORM{
             $this->query = "DELETE FROM $this->tabla";
             return $this;
         }catch(Exception){
-            echo("No se pudo eliminar al usuario");
+            echo("No se pudo eliminar");
         }
     }
 }

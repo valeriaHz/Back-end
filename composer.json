@@ -18,6 +18,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "vlucas/phpdotenv": "^5.6@dev"
+        "vlucas/phpdotenv": "^5.6@dev",
+        "phpgangsta/googleauthenticator": "dev-master",
+        "firebase/php-jwt": "dev-main"
     }
 }

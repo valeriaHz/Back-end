@@ -1,5 +1,4 @@
 <?php
-// echo 'estas en view';
 use config\Router;
 use controller\Login;
 ?>
@@ -28,14 +27,11 @@ use controller\Login;
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" placeholder="Introduce tu contraseña" />
             </div>
-            <button type="submit" class="btn btn-success">Login</button>
-            <p>
-                Crear cuenta <a href="registro" class="white">aquí</a>
-            </p>
+            <button type="submit">Login</button>
         </form>
     </main>
     <hr>
-    <table class="table">
+    <table class="table table-dark table-striped" style="width: 50%;">
         <thead>
             <tr>
                 <th scope="col">id</th>

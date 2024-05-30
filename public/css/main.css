@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/fondo.jpg);
+    background-image: url(../img/fondo.png);
 }
 
 hr{
@@ -49,7 +49,6 @@ header > img {
 
 main{
     width: 500px;
-    margin-top: 20vh;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 20px;
@@ -157,6 +156,7 @@ main > form > button{
 }
 
 #logout:active {
-    background-color: #0056b3;
+    background-color: #409cffb2;
     transform: translateY(1px);
 }
+

@@ -3,7 +3,7 @@
     use config\ORM;
     
     class TablaProductos extends ORM{
-        protected $tabla = 't_productos';
+        protected $tabla = 't_ropa';
         protected $id_tabla = 'id_producto';
     }
 ?>

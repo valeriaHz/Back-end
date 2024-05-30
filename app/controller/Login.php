@@ -1,17 +1,20 @@
 <?php
 
 namespace controller;
+
 use model\TablaLogin;
 use config\Router;
 use config\View;
 use model\TablaProductos;
 
 session_start();
-class Login extends View{
-    public function iniciarSesion(){
+class Login extends View
+{
+    public function iniciarSesion()
+    {
         if (!isset($_POST['email']) || !isset($_POST['password'])) {
             echo "Por favor, asegúrate de llenar ambos campos: email y contraseña.";
-            return; 
+            return;
         }
 
         $login = new TablaLogin();
@@ -20,7 +23,7 @@ class Login extends View{
             if ($usuario['password'] == $_POST['password']) {
                 $_SESSION['datos_usuario'] = $usuario;
                 header("Location: ./home");
-                exit; 
+                exit;
             } else {
                 echo "Contraseña incorrecta. <a href='login'>Intenta nuevamente</a>";
             }
@@ -32,60 +35,25 @@ class Login extends View{
     public function index(){
         $consulta = new TablaLogin;
         $datos = $consulta->consulta()->all();
-        return parent::vista('login',$datos);
-    }
-
-    public function registro(){
-        $datos = new TablaLogin;
-        return parent::vista('registro', $datos);
+        return parent::vista('login', $datos);
     }
 
     public function home(){
-        $datos = ["1","respuesta"];
-        return parent::vista('home',$datos);
-    }
-
-    public function usuarios(){
-        $consulta = new TablaLogin;
-        $datos = $consulta->consulta()->all();
-        return parent::vista('usuarios', $datos);
-    }
-
-    public function actualizar(){
-        $id_usuario = $_GET['id'] ?? null;
-        if ($id_usuario && $_SERVER["REQUEST_METHOD"] == "POST") {
-            $nuevos_datos = [
-                'id' => $id_usuario, 
-                'email' => $_POST['email'],
-                'password' => $_POST['password']
-            ];
-            $login = new TablaLogin;
-            $login->actualizar($nuevos_datos);
-            header("Location: usuarios");
-            exit;
-        } else {
-            echo "Solicitud no válida";
-        }
-    }
-
-    public function eliminar(){
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $datos = new TablaLogin;
-            $datos->eliminar();
-            header('Location: /login'); 
-            exit;
-        }
-        header('Location: /error'); 
-        exit;
+        $datos = ["1", "respuesta"];
+        return parent::vista('home', $datos);
     }
 
     public function productos(){
         $consulta = new TablaProductos();
-        echo json_encode($consulta->consulta()->all());
+        $datos = $consulta->consulta()->all();
+        return parent::vista('productos', $datos);
+    }
+
+    public function precios(){
+        $datos = new TablaProductos();
+        return parent::vista('precios', $datos);
     }
 
 }
 
 $controlador = new Login();
-
-?>
